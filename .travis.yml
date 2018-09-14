@@ -3,6 +3,9 @@ language: go
 go:
   - 1.x
 
+before_install:
+  - git clone https://github.com/Unleash/client-specification.git ./testdata/client-specification
+
 script:
  - go vet ./...
  - go test ./...
